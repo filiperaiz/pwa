@@ -5,14 +5,17 @@
     name="viewport"
   />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="#369f93"/>
-
-
   <title>
     {% if page.title %}{{ page.title | escape }}{% else %}{{
       site.title | escape
     }}{% endif %}
   </title>
+  
+  <meta property="og:title" content="Pwa">
+  <meta property="og:image" content="https://pwaraiz.netlify.com/img/icons/icon-152x152.png">
+  <meta property="og:description" content="Pwa Teste">
+  
+  <meta name="theme-color" content="#369f93"/>
 
   <meta
     name="description"
