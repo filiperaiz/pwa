@@ -1,0 +1,41 @@
+---
+layout: base
+title: PWA
+permalink: /
+---
+<section class="section text-center">
+  <img class="mb-4" src="/img/icons/icon-152x152.png" alt="" width="72" height="72" />
+
+  <div class="form-search">
+    <h2 class="h3 mb-3 font-weight-normal">Buscar usuario</h2>
+    <form action="#" onsubmit="onGetUser()" class="mb-3 ">
+      <input type="text" name="id" id="id" placeholder="Informe o id" class="form-control mb-3" />
+      <button type="submit" class="btn btn-lg btn-primary btn-block"> Buscar </button>
+    </form>
+
+    
+    <div id="error" style="display: none;" class="alert alert-danger"></div>
+    <div id="preloader" style="display: none;" class="alert alert-info"> Carregando... </div>
+    <div id="result" style="display: none;"></div>
+    
+    <button onclick="onShowNewUser()" class="btn btn-lg btn-success btn-block"> Novo usuario </button>
+  </div>
+
+  <div class="form-new " style="display: none;">
+    <h2 class="h3 mb-3 font-weight-normal">Adicionar usuario</h2>
+    <form action="#" onsubmit="onAddUser()" class="mb-3 ">
+      <input type="tel" name="id" id="userId" placeholder="id" class="form-control mb-3" />
+      <input type="text" name="nome" id="userName" placeholder="Nome" class="form-control mb-3" />
+      <input type="tel" name="id" id="userIdade" placeholder="idade" class="form-control mb-3" />
+      <input type="tel" name="id" id="userCpf" placeholder="Cpf" class="form-control mb-3" />
+      <input type="date" name="id" id="userConsulta" placeholder="Consulta" class="form-control mb-3" />
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Adicionar</button>
+    </form>
+  </div>
+
+  <!-- <p>Ative as notificações para ser avisado de sua consulta</p> -->
+  <button onclick="onPushNotification()" class="btn btn-lg btn-warning btn-block mt-3">Receber notificações </button>
+  <p id="tokenFB" style="word-wrap: break-word; margin-top: 10px"></p>
+
+  </div>
+</section>

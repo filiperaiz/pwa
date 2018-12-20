@@ -1,0 +1,73 @@
+<head>
+  <meta charset="utf-8" />
+  <meta
+    content="initial-scale=1, shrink-to-fit=no, width=device-width"
+    name="viewport"
+  />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>
+    {% if page.title %}{{ page.title | escape }}{% else %}{{
+      site.title | escape
+    }}{% endif %}
+  </title>
+
+  <meta
+    name="description"
+    content="{% if page.excerpt %}{{
+      page.excerpt | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- icons ios -->
+  <link rel="shortcut icon" href="../img/icons/icon-128x128.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../img/icons/icon-128x128.png" /> 
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../img/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../img/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../img/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="../img/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="../img/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../img/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/icons/icon-152x152.png" />
+
+  <!-- splash ios -->
+  <link rel="apple-touch-startup-image" sizes="2048x2732" href="../img/splash/apple_splash_2048.png" />
+  <link rel="apple-touch-startup-image" sizes="1668x2224" href="../img/splash/apple_splash_1668.png" />
+  <link rel="apple-touch-startup-image" sizes="1536x2048" href="../img/splash/apple_splash_1536.png" />
+  <link rel="apple-touch-startup-image" sizes="1125x2436" href="../img/splash/apple_splash_1125.png" />
+  <link rel="apple-touch-startup-image" sizes="1242x2208" href="../img/splash/apple_splash_1242.png" />
+  <link rel="apple-touch-startup-image" sizes="750x1334" href="../img/splash/apple_splash_750.png" />
+  <link rel="apple-touch-startup-image" sizes="640x1136" href="../img/splash/apple_splash_640.png" />
+
+  <link rel="manifest" href="../manifest.json" />
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(function() {
+          // console.log('Service Worker registered successfully');
+        })
+        .catch(function() {
+          console.log('Service worker registration failed');
+        });
+    }
+  </script>
+</head>
