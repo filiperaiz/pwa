@@ -16,7 +16,7 @@ permalink: /
     
     <div id="error" style="display: none;" class="alert alert-danger"></div>
     <div id="preloader" style="display: none;" class="alert alert-info"> Carregando... </div>
-    <div id="result" style="display: none;"></div>
+    <div id="result" class="mb-3" style="display: none;"></div>
     
     <button onclick="onShowNewUser()" class="btn btn-lg btn-success btn-block"> Novo usuario </button>
   </div>
@@ -25,10 +25,9 @@ permalink: /
     <h2 class="h3 mb-3 font-weight-normal">Adicionar usuario</h2>
     <form action="#" onsubmit="onAddUser()" class="mb-3 ">
       <input type="tel" name="id" id="userId" placeholder="id" class="form-control mb-3" />
-      <input type="text" name="nome" id="userName" placeholder="Nome" class="form-control mb-3" />
-      <input type="tel" name="id" id="userIdade" placeholder="idade" class="form-control mb-3" />
-      <input type="tel" name="id" id="userCpf" placeholder="Cpf" class="form-control mb-3" />
-      <input type="date" name="id" id="userConsulta" placeholder="Consulta" class="form-control mb-3" />
+      <input type="text" name="name" id="userName" placeholder="Nome" class="form-control mb-3" />
+      <input type="tel" name="age" id="userAge" placeholder="idade" class="form-control mb-3" />
+     
       <button type="submit" class="btn btn-lg btn-primary btn-block">Adicionar</button>
     </form>
   </div>

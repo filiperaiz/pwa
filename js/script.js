@@ -119,11 +119,11 @@ const onGetUser = () => {
   startPreloader();
 
   const url =
-    'https://my-json-server.typicode.com/filiperaiz/jsondb_server/users';
+    'https://my-json-server.typicode.com/filiperaiz/pwa_db/users';
   const id = parseInt(document.getElementById('id').value);
 
   axios
-    .get(`${url}`)
+    .get(`${url}/${id}`)
     .then(response => {
       showResult(response.data);
       console.log(response.data);
@@ -145,15 +145,13 @@ const onShowNewUser = () => {
 
 const onAddUser = () => {
   const pathUrl =
-    'https://my-json-server.typicode.com/filiperaiz/jsondb_server/users';
+    'https://my-json-server.typicode.com/filiperaiz/pwa_db/users';
 
   axios
     .post(pathUrl, {
       id: parseInt(document.getElementById('userId').value),
       name: document.getElementById('userName').value,
-      idade: document.getElementById('userIdade').value,
-      cpf: document.getElementById('userCpf').value,
-      consulta: document.getElementById('userConsulta').value
+      age: document.getElementById('userAge').value
     })
     .then(response => {
       console.log(response.data);
@@ -173,11 +171,10 @@ const showResult = user => {
 
   document.getElementById('result').innerHTML = `
       <ul class="list-group text-left">
+        <li class="list-group-item"><img src="${user.image}" alt=""></li>
         <li class="list-group-item"><b>Id: </b>${user.id}</li>
         <li class="list-group-item"><b>Nome: </b>${user.name}</li>
-        <li class="list-group-item"><b>Idade: </b>${user.idade}</li>
-        <li class="list-group-item"><b>CPF: </b>${user.cpf}</li>
-        <li class="list-group-item"><b>Consulta: </b>${user.consulta}</li>
+        <li class="list-group-item"><b>Idade: </b>${user.age}</li>
       </ul>
    `;
 };
