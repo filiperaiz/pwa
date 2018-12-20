@@ -30,8 +30,6 @@ const geoSuccess = pos => {
     'K'
   );
 
-  alert('teste')
-
   if (distance) {
     console.log(
       'Disparar POST para API enviar push com os dados do usuario + token push'
@@ -108,7 +106,6 @@ const onPushNotification = async () => {
     const token = await messaging.getToken();
     console.log('token do usuário:', token);
     // window.localStorage.setItem('dateUser', JSON.stringify(dateUser));
-    alert(token)
     document.getElementById('tokenFB').innerHTML = token;
 
     return token;
