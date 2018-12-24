@@ -118,7 +118,7 @@ const onGetUser = () => {
   startPreloader();
 
   const url =
-    'https://my-json-server.typicode.com/filiperaiz/pwa_db/users';
+    'http://gastrovita.hostess.digital:81/agenda/get-procedure-service-type-json/';
   const id = parseInt(document.getElementById('id').value);
 
   axios
