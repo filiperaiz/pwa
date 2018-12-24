@@ -1,45 +1,105 @@
 ---
 layout: base
-title: PWA
+title: Agendamento Online - Hospital Gastrovita
 permalink: /
 ---
-<section class="section text-center">
+
+<div class="container section-form">
   <div class="row">
     <div class="col">
-      <img class="mb-4" src="/img/icons/icon-152x152.png" alt="" width="72" height="72" />
-    
-      <div class="form-search">
-        <h2 class="h3 mb-3 font-weight-normal">Buscar usuario</h2>
-        <form action="#" onsubmit="onGetUser()" class="mb-3 ">
-          <input type="text" name="id" id="id" placeholder="Informe o id" aria-label="id" class="form-control mb-3" />
-          <button type="submit" class="btn btn-lg btn-primary btn-block"> Buscar </button>
-        </form>
-    
-        
-        <div id="error" style="display: none;" class="alert alert-danger"></div>
-        <div id="preloader" style="display: none;" class="alert alert-info"> Carregando... </div>
-        <div id="result" class="mb-3" style="display: none;"></div>
-        
-        <button onclick="onShowNewUser()" class="btn btn-lg btn-success btn-block"> Novo usuario </button>
-      </div>
-    
-      <div class="form-new " style="display: none;">
-        <h2 class="h3 mb-3 font-weight-normal">Adicionar usuario</h2>
-        <form action="#" onsubmit="onAddUser()" class="mb-3 ">
-          <input type="tel" name="id" id="userId" placeholder="id" aria-label="id" class="form-control mb-3" />
-          <input type="text" name="name" id="userName" placeholder="Nome" aria-label="name" class="form-control mb-3" />
-          <input type="tel" name="age" id="userAge" placeholder="idade" aria-label="age" class="form-control mb-3" />
-         
-          <button type="submit" class="btn btn-lg btn-primary btn-block">Adicionar</button>
-        </form>
-      </div>
-    
-      <!-- <p>Ative as notificações para ser avisado de sua consulta</p> -->
-      <button onclick="onPushNotification()" class="btn btn-lg btn-warning btn-block mt-3">Receber notificações </button>
-      <p id="tokenFB" style="word-wrap: break-word; margin-top: 10px"></p>
-    
-    
+      
+      <form action="" class="hostess_form">
 
+        <div class="form-row">
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="userName">Nome completo *</label>
+            <input type="text" class="form-control" id="userName" placeholder="Ex: Maria José " />
+          </div>
+
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="userCpf">CPF *</label>
+            <input type="text" class="form-control" id="userCpf" placeholder="Ex: 000.000.000-00 " />
+          </div>
+
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="userFone">Telefone *</label>
+            <input type="text" class="form-control" id="userFone" placeholder="Ex: Maria José " />
+          </div>
+
+        </div>
+
+        <hr class="divisor">
+
+        <div class="form-row">
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="selectProcedures">Procedimento *</label>
+            <select class="form-control" id="selectProcedures" name="procedures">
+              <option value="">Selecione um procedimento</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="selectSpecialities">Especialidade</label>
+            <select class="form-control" id="selectSpecialities" name="specialities">
+              <option value="">Selecione uma especialidade</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="selectProfessionals">Profissionais *</label>
+            <select class="form-control" id="selectProfessionals" name="professionals">
+              <option value="">Selecione um profissional </option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="selectAgreement">Convênio *</label>
+            <select class="form-control" id="selectAgreement" name="agreement">
+              <option value="">Selecione um convênio</option>
+            </select>
+          </div>
+        </div>
+
+        <hr class="divisor">
+
+        <div class="form-row">
+          <div class="form-group col-sm-12 col-md-4">
+            <label class="hostess_form-label" for="selectDateHour">Horários Disponíveis *</label>
+            <select class="form-control" id="selectDateHour" name="datehour">
+              <option value="">Selecione um horário</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-12 col-md-4 offset-md-4">
+            <label class="hostess_form-label" for="selectDateHour">Deseja ver outros horários?</label> <br>
+           
+            <button type="button" class="btn btn-light" id="btnMoreDatetime" data-toggle="modal" data-target="#modalDate">
+              Clique aqui
+            </button>
+
+            {% include modal.html %}
+          </div>
+        </div>
+
+        <hr class="divisor"> 
+
+        <div class="form-row">
+          <div class="form-group col-sm-12 col-md-4 ">
+              <label class="hostess_form-label" for="selectDateHour">Deseja receber notificações?</label> <br>
+              <button onclick="onPushNotification()" class="btn btn-light"> Ativar </button>
+          </div>
+
+          <div class=" form-group col-sm-12 col-md-4 offset-md-4">
+              <button type="submit" class="btn btn-lg btn-warning  btn-block mt-3">
+                Agendar Consulta
+              </button>
+          </div>
+        </div>
+      </form>
+
+      <p id="tokenFB" style="word-wrap: break-word; margin-top: 10px"></p>
     </div>
   </div>
-</section>
+</div>

@@ -4,15 +4,37 @@ html {
 
 body {
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #369f93;
+  background-image: url(/img/bg-shape.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-section{
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-  max-width: 380px;
-  margin: 0 auto;
+.section-form{
+  max-width: 800px;
+}
+
+.hostess{
+  &_section{
+    &-header{
+      padding: 20px 0 50px;
+    text-align: center;
+
+      img{
+        margin-bottom: 20px;;
+      }
+
+      h2{
+        color: #fff;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &_form{
+    &-label{
+      color: #fff;
+      font-weight: 700;
+    }
+  }
 }
