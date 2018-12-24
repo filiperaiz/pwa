@@ -122,7 +122,7 @@ const onGetUser = () => {
   const id = parseInt(document.getElementById('id').value);
 
   axios
-    .get(`${url}/${id}`)
+    .get(`${url}`)
     .then(response => {
       showResult(response.data);
       console.log(response.data);
