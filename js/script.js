@@ -118,11 +118,11 @@ const onGetUser = () => {
   startPreloader();
 
   const url =
-    'http://gastrovita.hostess.digital:81/agenda/get-procedure-service-type-json/';
+    'https://my-json-server.typicode.com/filiperaiz/pwa_db/users';
   const id = parseInt(document.getElementById('id').value);
 
   axios
-    .get(`${url}`)
+    .get(`${url}/${id}`)
     .then(response => {
       showResult(response.data);
       console.log(response.data);
